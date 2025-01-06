@@ -3,13 +3,13 @@
 
 'use strict';
 
-parseIP = (input) => {
-  result = [];
+const parseIP = (input) => {
+  const result = [];
   if (input === '') return;
   else {
-    parts = input.split('.');
+    const parts = input.split('.');
     if (parts.length != 4) return;
-    index = 0;
+    let index = 0;
     for (const part of parts) {
       result[index] = parseInt(part);
       if (isNaN(result[index])) return;
