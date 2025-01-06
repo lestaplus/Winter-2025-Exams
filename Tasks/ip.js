@@ -4,9 +4,8 @@
 'use strict';
 
 const parseIP = (input) => {
+  if (!input) return;
   const result = [];
-  if (input === '') return;
-  else {
     const parts = input.split('.');
     if (parts.length != 4) return;
     let index = 0;
@@ -15,7 +14,6 @@ const parseIP = (input) => {
       if (isNaN(result[index])) return;
       index++;
     }
-  }
   return result;
 };
 
