@@ -3,20 +3,20 @@
 
 'use strict';
 
-Parseip = (i) => {
-  a = [];
-  if (i === '') return;
+parseIP = (input) => {
+  result = [];
+  if (input === '') return;
   else {
-    B = i.split('.');
-    if (B.length != 4) return;
-    j = 0;
-    for (const b of B) {
-      a[j] = parseInt(b);
-      if (isNaN(a[j])) return;
-      j++;
+    parts = input.split('.');
+    if (parts.length != 4) return;
+    index = 0;
+    for (const part of parts) {
+      result[index] = parseInt(part);
+      if (isNaN(result[index])) return;
+      index++;
     }
   }
-  return a;
+  return result;
 };
 
-module.exports = Parseip;
+module.exports = parseIP;
