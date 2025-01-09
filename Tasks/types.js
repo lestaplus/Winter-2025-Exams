@@ -10,8 +10,7 @@ const types = (array) => {
     boolean: 0,
   };
   for (const element of array) {
-    const elementType = typeof element;
-    result[elementType]++;
+    result[typeof element]++;
   }
   return result;
 };
