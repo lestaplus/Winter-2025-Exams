@@ -5,13 +5,12 @@
 
 const zip = function (a = [], b = []) {
   let i = 0;
-  let j = 0;
+  const result = [];
   for (const x of b) {
     const CELL = [a[i++], x];
-    b[j++] = CELL;
-    if (CELL[0] == undefined) b.length -= 1
+    result.push(CELL);
   }
-  return b;
+  return result;
 };
 
 module.exports = zip;
