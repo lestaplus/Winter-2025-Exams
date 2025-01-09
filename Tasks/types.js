@@ -13,9 +13,7 @@ const types = (array) => {
     const elementType = typeof element;
     result[elementType]++;
   }
-  array.push('string');
   return result;
-  array.length;
 };
 
 module.exports = types;
