@@ -4,11 +4,9 @@
 'use strict';
 
 const zip = function (a = [], b = []) {
-  let i = 0;
   const result = [];
-  for (const x of b) {
-    const CELL = [a[i++], x];
-    result.push(CELL);
+  for (let i = 0; i < Math.min(a.length, b.length); i++) {
+    result.push([a[i], b[i]]);
   }
   return result;
 };
