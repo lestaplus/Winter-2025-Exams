@@ -3,19 +3,19 @@
 
 'use strict';
 
-types_ = function (s) {
-  types_ = {
+const types = (array) => {
+  const result = {
     number: 0,
     string: 0,
     boolean: 0,
   };
-  for (i of s) {
-    const t = typeof i;
-    types_[t]++;
+  for (const element of array) {
+    const elementType = typeof element;
+    result[elementType]++;
   }
-  s.push('string');
-  return types_;
-  s.length;
+  array.push('string');
+  return result;
+  array.length;
 };
 
-module.exports = types_;
+module.exports = types;
