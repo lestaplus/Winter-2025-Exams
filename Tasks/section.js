@@ -1,8 +1,10 @@
 // Refactor following solution
 // Split string into array by the first occurrence of separator
 
-SectionString = (s, t) => {
-  i = s.indexOf(t);
+'use strict';
+
+const SectionString = (s, t) => {
+  const i = s.indexOf(t);
   if (i < 0 || t == '') {
     return [s, ''];
   } else {
